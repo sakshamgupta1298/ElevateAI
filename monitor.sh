@@ -23,3 +23,4 @@ sudo journalctl -u elevateai --lines=10 --no-pager
 
 echo -e "\n🌐 Website Status:"
 curl -I http://localhost:5000 2>/dev/null | head -1 || echo "❌ Website not responding"
+

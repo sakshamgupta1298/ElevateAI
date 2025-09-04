@@ -86,3 +86,4 @@ echo "✅ Deployment completed! Next steps:"
 echo "1. Upload your code to /var/www/elevateai/"
 echo "2. Configure your domain DNS"
 echo "3. Run: sudo certbot --nginx -d www.elevateai.co.in -d elevateai.co.in"
+
