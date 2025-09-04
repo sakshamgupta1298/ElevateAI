@@ -43,9 +43,9 @@ def about():
 def services():
     return render_template('services.html')
 
-@app.route('/customers')
-def customers():
-    return render_template('customers.html')
+# @app.route('/customers')
+# def customers():
+#     return render_template('customers.html')
 
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
