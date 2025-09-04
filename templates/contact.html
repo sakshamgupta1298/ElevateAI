@@ -1,0 +1,165 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Contact Hero Section -->
+<section class="contact-hero-section text-center text-white py-5">
+    <div class="container">
+        <div class="row align-items-center min-vh-50">
+            <div class="col-lg-8 mx-auto">
+                <h1 class="display-4 fw-bold mb-4">Let's Build Something Amazing Together</h1>
+                <p class="lead mb-4">Ready to transform your startup idea into a scalable, AI-powered product? Get in touch with our team of experts.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section py-5">
+    <div class="container">
+        <div class="row g-5">
+            <!-- Contact Information -->
+            <div class="col-lg-4">
+                <h3 class="mb-4">Get in Touch</h3>
+                <div class="contact-info-card mb-4">
+                    <i class="fas fa-envelope fa-2x text-primary mb-3"></i>
+                    <h5>Email Us</h5>
+                                            <p>admin@elevateai.co.in</p>
+                    <p>We typically respond within 24 hours</p>
+                </div>
+                <div class="contact-info-card mb-4">
+                    <i class="fas fa-phone fa-2x text-primary mb-3"></i>
+                    <h5>Call Us</h5>
+                    <p>+1 (555) 123-4567</p>
+                    <p>Mon-Fri: 9AM-6PM EST</p>
+                </div>
+                <div class="contact-info-card">
+                    <i class="fas fa-map-marker-alt fa-2x text-primary mb-3"></i>
+                    <h5>Visit Us</h5>
+                    <p>123 Innovation Drive<br>Tech Hub, CA 90210</p>
+                    <p>By appointment only</p>
+                </div>
+            </div>
+            
+            <!-- Contact Form -->
+            <div class="col-lg-8">
+                <div class="contact-form">
+                    <h3 class="mb-4">Start Your Project</h3>
+                    <form id="contactForm" method="POST" action="{{ url_for('contact') }}">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="name" class="form-label">Full Name *</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="email" class="form-label">Email Address *</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="company" class="form-label">Company Name</label>
+                                <input type="text" class="form-control" id="company" name="company">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone" name="phone">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="service" class="form-label">Service of Interest</label>
+                            <select class="form-control" id="service" name="service">
+                                <option value="">Select a service</option>
+                                <option value="web-development">Custom Web & Mobile Applications</option>
+                                <option value="ai-integration">AI Integration & Machine Learning</option>
+                                <option value="technical-consultancy">Technical Consultancy</option>
+                                <option value="ui-ux-design">UI/UX Design</option>
+                                <option value="support-maintenance">Support & Maintenance</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="budget" class="form-label">Project Budget Range</label>
+                            <select class="form-control" id="budget" name="budget">
+                                <option value="">Select budget range</option>
+                                <option value="under-25k">Under $25,000</option>
+                                <option value="25k-50k">$25,000 - $50,000</option>
+                                <option value="50k-100k">$50,000 - $100,000</option>
+                                <option value="100k-250k">$100,000 - $250,000</option>
+                                <option value="over-250k">Over $250,000</option>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="form-label">Project Details *</label>
+                            <textarea class="form-control" id="message" name="message" rows="6" placeholder="Tell us about your project, goals, timeline, and any specific requirements..." required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary btn-lg px-5">
+                                <i class="fas fa-paper-plane me-2"></i>Send Message
+                            </button>
+                        </div>
+                    </form>
+                    <div id="successMessage" class="alert alert-success mt-4" style="display: none;">
+                        <i class="fas fa-check-circle me-2"></i>
+                        Thank you for your message! We will get back to you within 24 hours.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us for Contact -->
+<section class="why-contact-section py-5 bg-light">
+    <div class="container">
+        <h3 class="text-center mb-5">Why Startups Choose ElevateAI</h3>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="text-center">
+                    <i class="fas fa-clock fa-3x text-primary mb-3"></i>
+                    <h5>Fast Response Time</h5>
+                    <p>We respond to all inquiries within 24 hours and provide detailed project estimates quickly.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="text-center">
+                    <i class="fas fa-users fa-3x text-primary mb-3"></i>
+                    <h5>Dedicated Team</h5>
+                    <p>Work directly with our experienced team of developers, designers, and AI specialists.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="text-center">
+                    <i class="fas fa-shield-alt fa-3x text-primary mb-3"></i>
+                    <h5>NDA Protection</h5>
+                    <p>Your ideas are safe with us. We sign NDAs and maintain strict confidentiality.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const formData = new FormData(this);
+    
+    fetch(this.action, {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            document.getElementById('successMessage').style.display = 'block';
+            this.reset();
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+});
+</script>
+{% endblock %} 
