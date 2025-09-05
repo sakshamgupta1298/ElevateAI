@@ -31,6 +31,16 @@ def init_db():
 # Initialize database
 init_db()
 
+@app.route('/init-db')
+def init_database():
+    try:
+        # Drop existing tables and recreate them
+        db.drop_all()
+        db.create_all()
+        return "Database recreated successfully with updated schema"
+    except Exception as e:
+        return f"Database initialization error: {e}"
+
 @app.route('/')
 def home():
     return render_template('index.html')
@@ -43,9 +53,6 @@ def about():
 def services():
     return render_template('services.html')
 
-# @app.route('/customers')
-# def customers():
-#     return render_template('customers.html')
 
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
@@ -58,6 +65,10 @@ def contact():
             service = request.form.get('service')
             budget = request.form.get('budget')
             message = request.form.get('message')
+            
+            # Validate required fields
+            if not name or not email or not message:
+                return jsonify({'success': False, 'message': 'Please fill in all required fields.'}), 400
             
             new_contact = Contact(
                 name=name, 
@@ -74,7 +85,8 @@ def contact():
             return jsonify({'success': True, 'message': 'Thank you for your message! We will get back to you within 24 hours.'})
         except Exception as e:
             db.session.rollback()
-            return jsonify({'success': False, 'message': 'An error occurred. Please try again.'}), 500
+            print(f"Contact form error: {str(e)}")  # Debug print
+            return jsonify({'success': False, 'message': f'An error occurred: {str(e)}'}), 500
     
     return render_template('contact.html')
 

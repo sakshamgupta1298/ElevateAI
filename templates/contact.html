@@ -20,23 +20,25 @@
             <!-- Contact Information -->
             <div class="col-lg-4">
                 <h3 class="mb-4">Get in Touch</h3>
-                <div class="contact-info-card mb-4">
-                    <i class="fas fa-envelope fa-2x text-primary mb-3"></i>
-                    <h5>Email Us</h5>
-                                            <p>admin@elevateai.co.in</p>
-                    <p>We typically respond within 24 hours</p>
-                </div>
-                <div class="contact-info-card mb-4">
-                    <i class="fas fa-phone fa-2x text-primary mb-3"></i>
-                    <h5>Call Us</h5>
-                    <p>+1 (555) 123-4567</p>
-                    <p>Mon-Fri: 9AM-6PM EST</p>
-                </div>
                 <div class="contact-info-card">
-                    <i class="fas fa-map-marker-alt fa-2x text-primary mb-3"></i>
-                    <h5>Visit Us</h5>
-                    <p>123 Innovation Drive<br>Tech Hub, CA 90210</p>
-                    <p>By appointment only</p>
+                    <div class="contact-item mb-3">
+                        <div class="d-flex align-items-center mb-1">
+                            <i class="fas fa-envelope fa-2x text-primary me-3"></i>
+                            <h5 class="mb-0">Email Us</h5>
+                        </div>
+                        <p class="mb-1 ms-5">admin@elevateai.co.in</p>
+                        <p class="mb-0 ms-5 text-muted">We typically respond within 24 hours</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="d-flex align-items-center mb-1">
+                            <i class="fas fa-phone fa-2x text-primary me-3"></i>
+                            <h5 class="mb-0">Call Us</h5>
+                        </div>
+                        <p class="mb-1 ms-5">+91 9555360423</p>
+                        <p class="mb-0 ms-5 text-muted">Mon-Sat: 9AM-6PM IST</p>
+                    </div>
+                    
                 </div>
             </div>
             
@@ -81,11 +83,11 @@
                             <label for="budget" class="form-label">Project Budget Range</label>
                             <select class="form-control" id="budget" name="budget">
                                 <option value="">Select budget range</option>
-                                <option value="under-25k">Under $25,000</option>
-                                <option value="25k-50k">$25,000 - $50,000</option>
-                                <option value="50k-100k">$50,000 - $100,000</option>
-                                <option value="100k-250k">$100,000 - $250,000</option>
-                                <option value="over-250k">Over $250,000</option>
+                                <option value="50k-100k">₹50,000 - ₹1,00,000 ($625 - $1,250)</option>
+                                <option value="100k-250k">₹1,00,000 - ₹2,50,000 ($1,250 - $3,125)</option>
+                                <option value="250k-500k">₹2,50,000 - ₹5,00,000 ($3,125 - $6,250)</option>
+                                <option value="500k-1m">₹5,00,000 - ₹10,00,000 ($6,250 - $12,500)</option>
+                                <option value="over-1m">Over ₹10,00,000 ($12,500+)</option>
                             </select>
                         </div>
                         <div class="mb-4">
@@ -132,6 +134,26 @@
                     <i class="fas fa-shield-alt fa-3x text-primary mb-3"></i>
                     <h5>NDA Protection</h5>
                     <p>Your ideas are safe with us. We sign NDAs and maintain strict confidentiality.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Calendly Scheduling Section -->
+<section class="calendly-section py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="text-center mb-3">
+                    <h2 class="mb-2">Schedule a Free Consultation</h2>
+                    <p class="lead mb-0">Book a 30-minute call with our team to discuss your project requirements and get a personalized quote.</p>
+                </div>
+                <div class="calendly-widget">
+                    <!-- Calendly inline widget begin -->
+                    <div class="calendly-inline-widget" data-url="https://calendly.com/admin-elevateai/30min" style="min-width:320px;height:500px;"></div>
+                    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                    <!-- Calendly inline widget end -->
                 </div>
             </div>
         </div>
