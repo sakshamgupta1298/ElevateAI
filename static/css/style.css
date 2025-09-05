@@ -50,6 +50,16 @@ body {
 .hero-section .btn {
     position: relative;
     z-index: 2;
+    background-color: white;
+    border-color: white;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.hero-section .btn:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-color: rgba(255, 255, 255, 0.9);
+    color: var(--primary-color);
 }
 
 /* Services Section */
@@ -82,8 +92,22 @@ body {
 
 /* CTA Section */
 .cta-section {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(147, 51, 234, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 50% 20%, rgba(239, 68, 68, 0.1) 0%, transparent 50%),
+        linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
     padding: 5rem 0;
+}
+
+/* Client Success Highlight */
+.client-success-highlight {
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(147, 51, 234, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 50% 20%, rgba(239, 68, 68, 0.1) 0%, transparent 50%),
+        linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%) !important;
+    border: none !important;
 }
 
 /* Navigation */
@@ -440,7 +464,11 @@ footer a:hover {
 }
 
 .services-cta-section {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(147, 51, 234, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 50% 20%, rgba(239, 68, 68, 0.1) 0%, transparent 50%),
+        linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
     padding: 5rem 0;
 }
 
