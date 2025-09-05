@@ -1,5 +1,5 @@
 # Gunicorn configuration file
-bind = "127.0.0.1:5000"
+bind = "127.0.0.1:3000"
 workers = 2
 worker_class = "sync"
 worker_connections = 1000
